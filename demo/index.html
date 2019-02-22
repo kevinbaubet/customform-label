@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>CustomFormLabel</title>
+        <link rel="stylesheet" href="demo.css" />
+
+        <link rel="stylesheet" href="../dist/customform-label.css" />
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+        <script src="../src/customform-label.js"></script>
+
+        <script>
+            jQuery(document).ready(function ($) {
+                // DEMO
+                $('form.l-customform-label').customFormLabel();
+            });
+        </script>
+    </head>
+    <body>
+        <div class="page">
+            <h1>Custom Form Label</h1>
+
+            <div class="demo-item">
+                <h2>Labels</h2>
+                <form class="l-customform-label">
+                    <div class="form-col">
+                        <div class="form-item">
+                            <label for="label-1">Text 1</label>
+                            <input class="form-text" type="text" id="label-1" name="label-1" value="" />
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-item">
+                            <label for="label-2">Text 2</label>
+                            <input class="form-text" type="text" id="label-2" name="label-2" value="" />
+                        </div>
+                    </div>
+
+                    <div class="clear"></div>
+                    <div class="form-item">
+                        <label for="label-3">Textarea</label>
+                        <textarea class="form-textarea" id="label-3"></textarea>
+                    </div>
+                    <div class="clear"></div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

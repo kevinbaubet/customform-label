@@ -1,0 +1,46 @@
+/* ==========================================================================
+   CustomFormLabel
+   ========================================================================== */
+.customform--label {
+  position: relative;
+}
+
+.customform--label label {
+  position: absolute;
+  z-index: 5;
+  top: 10px;
+  left: 0;
+  padding: 0.25rem 1.25rem;
+  border-top: 1px solid transparent;
+  border-left: 1px solid #ccc;
+  font-size: 1em;
+  background: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.customform--label label:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 10px;
+  width: 1px;
+  background-color: transparent;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.customform--label.is-filled label {
+  top: -10px;
+}
+
+.customform--label.is-filled label, .customform--label.is-focused label {
+  border-color: #ccc;
+}
+
+.customform--label.is-filled label:after, .customform--label.is-focused label:after {
+  background-color: #ccc;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
