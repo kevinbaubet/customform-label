@@ -102,16 +102,12 @@
         eventsHandler: function () {
             var self = this;
 
-            self.getInputs().on('click.customform keyup.customform blur.customform', function (event) {
+            self.getInputs().on('click.customform keyup.customform blur.customform change.customform', function (event) {
                 var input = $(event.currentTarget);
                 var wrapper = self.getWrapper(input);
 
                 if (event.type === 'blur') {
-                    if (input.val().length > 0) {
-                        wrapper.removeClass(self.settings.classes.focused);
-                    } else {
-                        wrapper.removeClass(self.settings.classes.filled + ' ' + self.settings.classes.focused);
-                    }
+                    wrapper.removeClass((input.val().length > 0 ? '' : self.settings.classes.filled + ' ') + self.settings.classes.focused);
 
                 } else {
                     wrapper.addClass(self.settings.classes.filled + ' ' + self.settings.classes.focused);
