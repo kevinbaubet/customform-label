@@ -3,15 +3,16 @@
 /* ==========================================================================
    CustomFormLabel
    ========================================================================== */
-.customform--label { $top: 10px;
+.customform--label {
     position: relative;
 
     label {
         position: absolute;
         z-index: 5;
-        top: $top;
+        top: $input--padding-vertical;
         left: 0;
-        padding: 4px $input--padding-horizontal;
+        transform: translateY(0);
+        padding: 0 $input--padding-horizontal;
         border-top: 1px solid transparent;
         border-left: 1px solid $input--border-color;
         font-size: 1em;
@@ -23,7 +24,7 @@
             position: absolute;
             top: 0;
             right: 0;
-            height: $top;
+            height: 50%;
             width: 1px;
             background-color: transparent;
             transition: .1s;
@@ -32,7 +33,10 @@
 
     &.is-filled {
         label {
-            top: -$top;
+            top: 0;
+            transform: translateY(-50%);
+            padding-top: 4px;
+            padding-bottom: 4px;
         }
     }
     &.is-filled,

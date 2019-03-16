@@ -8,9 +8,11 @@
 .customform--label label {
   position: absolute;
   z-index: 5;
-  top: 10px;
+  top: 16px;
   left: 0;
-  padding: 0.25rem 1.25rem;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  padding: 0 1.25rem;
   border-top: 1px solid transparent;
   border-left: 1px solid #ccc;
   font-size: 1em;
@@ -24,7 +26,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  height: 10px;
+  height: 50%;
   width: 1px;
   background-color: transparent;
   -webkit-transition: .1s;
@@ -32,7 +34,11 @@
 }
 
 .customform--label.is-filled label {
-  top: -10px;
+  top: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .customform--label.is-filled label, .customform--label.is-focused label {

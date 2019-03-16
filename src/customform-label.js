@@ -90,6 +90,13 @@
 
                 if (input.val().length > 0) {
                     wrapper.addClass(self.settings.classes.filled);
+
+                } else if (navigator.userAgent.indexOf('Chrome/') !== -1) {
+                    setTimeout(function () {
+                        if (input.is(':-webkit-autofill')) {
+                            wrapper.addClass(self.settings.classes.filled);
+                        }
+                    }, 0);
                 }
             });
 
