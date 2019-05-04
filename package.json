@@ -1,8 +1,11 @@
 {
-  "name": "customform-label",
+  "name": "@kevinbaubet/customform-label",
   "version": "2.0.2",
   "main": "./dist/customform-label.min.js",
-  "repository": "https://github.com/kevinbaubet/customform-label.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinbaubet/customform-label.git"
+  },
   "author": "Kévin Baubet <contact@kevinbaubet.fr>",
   "license": "MIT",
   "dependencies": {
