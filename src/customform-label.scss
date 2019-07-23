@@ -1,7 +1,7 @@
 @import "variables";
 
 /* ==========================================================================
-   CustomFormLabel
+   CustomForm Label
    ========================================================================== */
 .customform--label {
     position: relative;
@@ -9,45 +9,28 @@
     label {
         position: absolute;
         z-index: 5;
-        top: $input--padding-vertical;
+        top: $input--padding-vertical + $input--border-width;
         left: 0;
         transform: translateY(0);
+        margin: 0;
         padding: 0 $input--padding-horizontal;
-        border-top: 1px solid transparent;
-        border-left: 1px solid $input--border-color;
-        font-size: 1em;
-        background: $input--background;
+        font-size: $input--fontsize;
+        cursor: text;
         transition: .3s;
-
-        &:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            height: 50%;
-            width: 1px;
-            background-color: transparent;
-            transition: .1s;
-        }
     }
 
     &.is-filled {
         label {
-            top: 0;
-            transform: translateY(-50%);
-            padding-top: 4px;
-            padding-bottom: 4px;
+            top: -10px;
+            transform: translateY(-100%);
+            padding-left: 0;
         }
     }
     &.is-filled,
     &.is-focused {
         label {
-            border-color: $input--border-color;
-
-            &:after {
-                background-color: $input--border-color;
-                transition: .3s;
-            }
+            font-size: 1em;
+            cursor: default;
         }
     }
 }

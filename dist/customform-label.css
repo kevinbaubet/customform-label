@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CustomFormLabel
+   CustomForm Label
    ========================================================================== */
 .customform--label {
   position: relative;
@@ -8,45 +8,26 @@
 .customform--label label {
   position: absolute;
   z-index: 5;
-  top: 16px;
+  top: 17px;
   left: 0;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+  margin: 0;
   padding: 0 1.25rem;
-  border-top: 1px solid transparent;
-  border-left: 1px solid #ccc;
-  font-size: 1em;
-  background: #fff;
+  font-size: 1rem;
+  cursor: text;
   -webkit-transition: .3s;
   transition: .3s;
-}
-
-.customform--label label:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 50%;
-  width: 1px;
-  background-color: transparent;
-  -webkit-transition: .1s;
-  transition: .1s;
 }
 
 .customform--label.is-filled label {
-  top: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  top: -10px;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  padding-left: 0;
 }
 
 .customform--label.is-filled label, .customform--label.is-focused label {
-  border-color: #ccc;
-}
-
-.customform--label.is-filled label:after, .customform--label.is-focused label:after {
-  background-color: #ccc;
-  -webkit-transition: .3s;
-  transition: .3s;
+  font-size: 1em;
+  cursor: default;
 }
